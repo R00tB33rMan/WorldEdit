@@ -25,14 +25,14 @@ import com.sk89q.worldedit.extension.platform.scheduler.SchedulerAdapter;
 import org.bukkit.plugin.Plugin;
 
 public final class BukkitSchedulerAdapters {
-    private final static boolean FOLIA_SUPPORT = foliaSupport();
+    private final boolean folia_support = foliaSupport();
 
-    private BukkitSchedulerAdapters() {
+    public BukkitSchedulerAdapters() {
         // Call only through a method
     }
 
-    public static SchedulerAdapter create(Plugin plugin) {
-        if (FOLIA_SUPPORT) {
+    public SchedulerAdapter create(Plugin plugin) {
+        if (folia_support) {
             return new FoliaSchedulerAdapter(plugin);
         }
         return new BukkitSchedulerAdapter(plugin);
