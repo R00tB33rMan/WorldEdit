@@ -122,7 +122,7 @@ public class WorldEditPlugin extends JavaPlugin implements TabCompleter {
 
     private final SimpleLifecycled<BukkitImplAdapter> adapter =
         SimpleLifecycled.invalid();
-    private final SchedulerAdapter scheduler = BukkitSchedulerAdapters.create(this);
+    private final SchedulerAdapter scheduler =  new BukkitSchedulerAdapters().create(this);
     private BukkitServerInterface platform;
     private BukkitConfiguration config;
 
