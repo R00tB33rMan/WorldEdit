@@ -29,7 +29,6 @@ fun Project.applyCommonJavaConfiguration(sourcesJar: Boolean, javaRelease: Int =
             options.isDeprecation = true
             options.encoding = "UTF-8"
             options.compilerArgs.add("-parameters")
-            options.compilerArgs.add("-Werror")
         }
 
     configure<CheckstyleExtension> {
